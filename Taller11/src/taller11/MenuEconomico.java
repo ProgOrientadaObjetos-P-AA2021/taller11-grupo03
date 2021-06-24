@@ -6,21 +6,24 @@
 package taller11;
 
 public class MenuEconomico extends Menu{
-    protected double porcentajeDescuento;
+    private double porcentajeDescuento;
     
-    public MenuEconomico(String n, double vM, double vI, double pD){
-        super(n, vM, vI);
-        porcentajeDescuento = pD;
+    public MenuEconomico(String n){
+        super(n);
     }
     
+    @Override
+    public void calcularCostoMenu(){
+        costoMenu = costoInicialMenu + porcentajeDescuento;
+    }
     public void establecerPorcentajeDescuento(double pD){
-        porcentajeDescuento = pD;
+        porcentajeDescuento = (costoInicialMenu*0.10);
     }
     
     public double obtenerPorcentajeDescuento(){
         return porcentajeDescuento;
     }
-    
+    @Override
     public String toString() {
         String cadena = String.format("Menú Económico\n"
                 + "Nombre del plato: %s\n"
@@ -28,7 +31,7 @@ public class MenuEconomico extends Menu{
                 + "Porcentaje de descuento: %.2f\n",
                 obtenerNombrePlato(),
                 obtenerCostoMenu(),
-                obtenerCostoMenu(),
+                obtenerInicialMenu(),
                 porcentajeDescuento);
 
         return cadena;

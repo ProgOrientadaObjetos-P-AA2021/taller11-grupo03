@@ -6,13 +6,18 @@
 package taller11;
 
 public class MenuNiños extends Menu{
-    protected double valorHelado;
-    protected double valorPastel;
+    private double valorHelado;
+    private double valorPastel;
     
-    public MenuNiños(String n, double vM, double vI, double vH, double vP){
-        super(n, vM, vI);
+    public MenuNiños(String n,double vH,
+            double vP){
+        super(n);
         valorHelado = vH;
         valorPastel = vP;
+    }
+    @Override
+    public void calcularCostoMenu(){
+        costoMenu = costoInicialMenu + valorHelado + valorPastel;
     }
     
     public void establecerValorHelado(double vH){
@@ -30,7 +35,7 @@ public class MenuNiños extends Menu{
     public double obtenerValorPastel(){
         return valorPastel;
     }
-    
+    @Override
     public String toString() {
         String cadena = String.format("Menú del Día\n"
                 + "Nombre del plato: %s\n"
@@ -40,7 +45,7 @@ public class MenuNiños extends Menu{
                 + "Valor del pastel: %.2f\n",
                 obtenerNombrePlato(),
                 obtenerCostoMenu(),
-                obtenerCostoMenu(),
+                obtenerInicialMenu(),
                 valorHelado,
                 valorPastel);
 

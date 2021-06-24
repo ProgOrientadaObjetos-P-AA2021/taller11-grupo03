@@ -10,19 +10,12 @@ package taller11;
  * @author usuario
  */
 public abstract class Menu{
-
-    protected String nombreCliente;
     protected String nombrePlato;
     protected double costoMenu;
     protected double costoInicialMenu;
 
-    public Menu(String nc, String np) {
-        nombreCliente = nc;
+    public Menu(String np) {
         nombrePlato = np;
-    }
-
-    public void establecerNombreCliente(String n) {
-        nombreCliente = n;
     }
 
     public void establecerNombrePlato(String n) {
@@ -33,10 +26,6 @@ public abstract class Menu{
 
     public void establecerCostoInicialMenu(double n) {
         costoInicialMenu = n;
-    }
-
-    public String obtenerNombreCliente() {
-        return nombreCliente;
     }
 
     public String obtenerNombrePlato() {
