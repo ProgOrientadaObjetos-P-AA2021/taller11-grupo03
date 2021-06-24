@@ -11,6 +11,8 @@ public class MenuNiños extends Menu{
     
     public MenuNiños(String n, double vM, double vI, double vH, double vP){
         super(n, vM, vI);
+        valorHelado = vH;
+        valorPastel = vP;
     }
     
     public void establecerValorHelado(double vH){
@@ -38,7 +40,7 @@ public class MenuNiños extends Menu{
                 + "Valor del pastel: %.2f\n",
                 obtenerNombrePlato(),
                 obtenerCostoMenu(),
-                obtenerCostoInicialMenu(),
+                obtenerCostoMenu(),
                 valorHelado,
                 valorPastel);
 

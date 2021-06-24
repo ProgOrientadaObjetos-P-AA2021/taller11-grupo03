@@ -10,6 +10,7 @@ public class MenuEconomico extends Menu{
     
     public MenuEconomico(String n, double vM, double vI, double pD){
         super(n, vM, vI);
+        porcentajeDescuento = pD;
     }
     
     public void establecerPorcentajeDescuento(double pD){
@@ -27,7 +28,7 @@ public class MenuEconomico extends Menu{
                 + "Porcentaje de descuento: %.2f\n",
                 obtenerNombrePlato(),
                 obtenerCostoMenu(),
-                obtenerCostoInicialMenu(),
+                obtenerCostoMenu(),
                 porcentajeDescuento);
 
         return cadena;

@@ -13,7 +13,7 @@ public abstract class MenuCarta extends Menu {
         porcentajeAdicional = pa; 
     }
     
-    @Override
+    
     public void CalcularCostoMenu(){
         costoMenu = valorBebida + valorPorcionGuarnicion;
     }

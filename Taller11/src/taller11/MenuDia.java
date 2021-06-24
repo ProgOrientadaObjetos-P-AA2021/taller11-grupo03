@@ -11,6 +11,8 @@ public class MenuDia extends Menu{
     
     public MenuDia(String n, double vM, double vI, double vP, double vB){
         super(n, vM, vI);
+        valorPostre = vP;
+        valorBebida = vB;
     }
     
     public void establecerValorPostre(double vP){
@@ -38,7 +40,7 @@ public class MenuDia extends Menu{
                 + "Valor de la bebida: %.2f\n",
                 obtenerNombrePlato(),
                 obtenerCostoMenu(),
-                obtenerCostoInicialMenu(),
+                obtenerCostoMenu(),
                 valorPostre,
                 valorBebida);
 
