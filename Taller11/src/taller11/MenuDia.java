@@ -9,8 +9,8 @@ public class MenuDia extends Menu{
     private double valorPostre;
     private double valorBebida;
     
-    public MenuDia(String n,double vP, double vB){
-        super(n);
+    public MenuDia(String n,double vP, double vB, double cI){
+        super(n, cI);
         valorPostre = vP;
         valorBebida = vB;
     }
@@ -39,15 +39,15 @@ public class MenuDia extends Menu{
     public String toString() {
         String cadena = String.format("Menú del Día\n"
                 + "Nombre del plato: %s\n"
-                + "Valor del menú: %.2f\n"
                 + "Valor inicial del menú: %.2f\n"
                 + "Valor del postre: %.2f\n"
-                + "Valor de la bebida: %.2f\n",
+                + "Valor de la bebida: %.2f\n"
+                + "Valor del menú: %.2f\n",
                 obtenerNombrePlato(),
-                obtenerCostoMenu(),
                 obtenerInicialMenu(),
                 valorPostre,
-                valorBebida);
+                valorBebida,
+                obtenerCostoMenu());
 
         return cadena;
     }

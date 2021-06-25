@@ -9,13 +9,15 @@ package taller11;
  *
  * @author usuario
  */
-public abstract class Menu{
+public abstract class Menu {
+
     protected String nombrePlato;
     protected double costoMenu;
     protected double costoInicialMenu;
 
-    public Menu(String np) {
+    public Menu(String np, double cI) {
         nombrePlato = np;
+        costoInicialMenu = cI;
     }
 
     public void establecerNombrePlato(String n) {
